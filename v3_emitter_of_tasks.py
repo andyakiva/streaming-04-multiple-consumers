@@ -65,7 +65,7 @@ def send_message(host: str, queue_name: str, message: str):
 def use_messages(file_name: str, host: str, queue_name: str):
     items = get_messages(file_name)
     for item in items:
-        message = str(list)
+        message = str(item)
         send_message(host, queue_name, message)
         print(f"Sent: {item}")
 
@@ -79,4 +79,4 @@ if __name__ == "__main__":
     #assaign file for messages
     file_name= "tasks.csv"
     # send messages from csv
-    use_messages(file_name, "localhost", "custom_queue")
+    use_messages(file_name, "localhost", "custom_queue3")
